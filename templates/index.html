@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam and Phishing Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static\\Designer.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #cfcfcf;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4caf50;
+            animation: fadeIn 3s ease-in-out; /* Apply animation to heading */
+        }
+
+        form {
+            animation: slideIn 2s ease-in-out; /* Slide-in effect for the form */
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #4caf50;
+            background-color: #2e2e2e;
+            color: #cfcfcf;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            animation: pulse 1s infinite; /* Pulsing effect on submit button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Spam and Phishing Detector</h1>
+    <form action="/classify" method="post">
+        <input type="text" name="message" placeholder="Enter your message here" required>
+        <input type="submit" value="Classify Message">
+    </form>
+</body>
+</html>
