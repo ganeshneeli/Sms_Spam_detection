@@ -13,8 +13,8 @@ import re
 app = Flask(__name__)
 
 # Define paths
-input_file_path_txt = r'SMSSpamCollection_path'
-output_file_path_csv = r'SMSSpamCollection.csv_path'
+input_file_path_txt = r'SMSSpamCollection_path_location'
+output_file_path_csv = r'SMSSpamCollection.csv_path_location'
 
 # Convert TXT to CSV
 def convert_txt_to_csv(txt_path, csv_path):
